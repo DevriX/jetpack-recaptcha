@@ -21,8 +21,8 @@ class JPreCaptchaAdmin
 
         add_submenu_page(
             $JPreCaptchaCore->isNetworkActive() ? 'settings.php' : 'options-general.php',
-            __('JetPack reCaptcha Settings', JPRECAPTCHA_DOMAIN),
-            __('JP reCaptcha', JPRECAPTCHA_DOMAIN),
+            __('JetPack reCaptcha Settings', 'jp-recaptcha'),
+            __('JP reCaptcha', 'jp-recaptcha'),
             'manage_options',
             'jp-recaptcha',
             array($ins, "screen")
@@ -38,7 +38,7 @@ class JPreCaptchaAdmin
 
         <div class="wrap">
         
-            <h2><?php _e('JetPack reCaptcha Settings', JPRECAPTCHA_DOMAIN); ?></h2>
+            <h2><?php _e('JetPack reCaptcha Settings', 'jp-recaptcha'); ?></h2>
 
             <?php if ( isset($JPreCaptcha->notices) ) : ?>
                 <?php echo $JPreCaptcha->notices; ?>
@@ -47,22 +47,22 @@ class JPreCaptchaAdmin
             <form method="post">
 
                 <div class="section">
-                    <p><strong><?php _e('reCaptcha credentials:', JPRECAPTCHA_DOMAIN); ?></strong></p>
+                    <p><strong><?php _e('reCaptcha credentials:', 'jp-recaptcha'); ?></strong></p>
 
-                    <p><?php _e('Before you setup this plugin, make sure to go to <a href="https://www.google.com/recaptcha" target="_blank">Google reCaptcha</a> website and register your site. After that, insert both public and secret captcha keys in the following fields. A <a href="https://www.google.com/search?q=how+to+get+google+recaptcha" target="_blank">tutorial</a> might also help.', JPRECAPTCHA_DOMAIN); ?></p>
+                    <p><?php _e('Before you setup this plugin, make sure to go to <a href="https://www.google.com/recaptcha" target="_blank">Google reCaptcha</a> website and register your site. After that, insert both public and secret captcha keys in the following fields. A <a href="https://www.google.com/search?q=how+to+get+google+recaptcha" target="_blank">tutorial</a> might also help.', 'jp-recaptcha'); ?></p>
 
                     <p>
-                        <label><?php _e('Enter your Google reCaptcha public key:', JPRECAPTCHA_DOMAIN); ?><br/>
+                        <label><?php _e('Enter your Google reCaptcha public key:', 'jp-recaptcha'); ?><br/>
                         <input type="text" name="recaptcha_public" size="50" value="<?php echo esc_attr($JPreCaptcha->public); ?>" /></label>
                     </p>
 
                     <p>
-                        <label><?php _e('Enter your Google reCaptcha secret key:', JPRECAPTCHA_DOMAIN); ?><br/>
+                        <label><?php _e('Enter your Google reCaptcha secret key:', 'jp-recaptcha'); ?><br/>
                         <input type="text" name="recaptcha_secret" size="50" value="<?php echo esc_attr($JPreCaptcha->secret); ?>" /></label>
                     </p>
 
                     <p>
-                        <label for="recaptcha_locale"><strong><?php _e('reCaptcha Language:', JPRECAPTCHA_DOMAIN); ?></strong></label>
+                        <label for="recaptcha_locale"><strong><?php _e('reCaptcha Language:', 'jp-recaptcha'); ?></strong></label>
                     </p>
                     <p>
                         <select name="recaptcha_locale" id="recaptcha_locale">
@@ -129,7 +129,7 @@ class JPreCaptchaAdmin
             // print feedback
             $JPreCaptcha->notices .= sprintf(
                 '<div class="updated notice is-dismissible"><p>%s</p></div>',
-                __('Settings updated successfully!', JPRECAPTCHA_DOMAIN)
+                __('Settings updated successfully!', 'jp-recaptcha')
             );
         }
     }
@@ -145,7 +145,7 @@ class JPreCaptchaAdmin
 
         return array_merge(array(
             'Settings' => sprintf(
-                '<a href="%s">' . __('Settings', JPRECAPTCHA_DOMAIN) . '</a>',
+                '<a href="%s">' . __('Settings', 'jp-recaptcha') . '</a>',
                 $link
             )
         ), $links);

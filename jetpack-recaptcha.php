@@ -4,7 +4,7 @@ Plugin Name: Jetpack reCaptcha
 Plugin URI: https://github.com/elhardoum/jetpack-recaptcha
 Description: Google reCaptcha integration for Jetpack contact forms
 Author: Samuel Elh
-Version: 0.1
+Version: 0.2
 Author URI: https://samelh.com
 Text Domain: jp-recaptcha
 */
@@ -43,76 +43,76 @@ class JPreCaptcha
             'locale' => 'en',
             'ready' => false,
             'locales' => array(
-                "ar" => "Arabic",
-                "af" => "Afrikaans",
-                "am" => "Amharic",
-                "hy" => "Armenian",
-                "az" => "Azerbaijani",
-                "eu" => "Basque",
-                "bn" => "Bengali",
-                "bg" => "Bulgarian",
-                "ca" => "Catalan",
-                "zh-HK" => "Chinese (Hong Kong)",
-                "zh-CN" => "Chinese (Simplified)",
-                "zh-TW" => "Chinese (Traditional)",
-                "hr" => "Croatian",
-                "cs" => "Czech",
-                "da" => "Danish",
-                "nl" => "Dutch",
-                "en-GB" => "English (UK)",
-                "en" => "English (US)",
-                "et" => "Estonian",
-                "fil" => "Filipino",
-                "fi" => "Finnish",
-                "fr" => "French",
-                "fr-CA" => "French (Canadian)",
-                "gl" => "Galician",
-                "ka" => "Georgian",
-                "de" => "German",
-                "de-AT" => "German (Austria)",
-                "de-CH" => "German (Switzerland)",
-                "el" => "Greek",
-                "gu" => "Gujarati",
-                "iw" => "Hebrew",
-                "hi" => "Hindi",
-                "hu" => "Hungarain",
-                "is" => "Icelandic",
-                "id" => "Indonesian",
-                "it" => "Italian",
-                "ja" => "Japanese",
-                "kn" => "Kannada",
-                "ko" => "Korean",
-                "lo" => "Laothian",
-                "lv" => "Latvian",
-                "lt" => "Lithuanian",
-                "ms" => "Malay",
-                "ml" => "Malayalam",
-                "mr" => "Marathi",
-                "mn" => "Mongolian",
-                "no" => "Norwegian",
-                "fa" => "Persian",
-                "pl" => "Polish",
-                "pt" => "Portuguese",
-                "pt-BR" => "Portuguese (Brazil)",
-                "pt-PT" => "Portuguese (Portugal)",
-                "ro" => "Romanian",
-                "ru" => "Russian",
-                "sr" => "Serbian",
-                "si" => "Sinhalese",
-                "sk" => "Slovak",
-                "sl" => "Slovenian",
-                "es" => "Spanish",
-                "es-419" => "Spanish (Latin America)",
-                "sw" => "Swahili",
-                "sv" => "Swedish",
-                "ta" => "Tamil",
-                "te" => "Telugu",
-                "th" => "Thai",
-                "tr" => "Turkish",
-                "uk" => "Ukrainian",
-                "ur" => "Urdu",
-                "vi" => "Vietnamese",
-                "zu" => "Zulu"
+                'ar' => 'Arabic',
+                'af' => 'Afrikaans',
+                'am' => 'Amharic',
+                'hy' => 'Armenian',
+                'az' => 'Azerbaijani',
+                'eu' => 'Basque',
+                'bn' => 'Bengali',
+                'bg' => 'Bulgarian',
+                'ca' => 'Catalan',
+                'zh-HK' => 'Chinese (Hong Kong)',
+                'zh-CN' => 'Chinese (Simplified)',
+                'zh-TW' => 'Chinese (Traditional)',
+                'hr' => 'Croatian',
+                'cs' => 'Czech',
+                'da' => 'Danish',
+                'nl' => 'Dutch',
+                'en-GB' => 'English (UK)',
+                'en' => 'English (US)',
+                'et' => 'Estonian',
+                'fil' => 'Filipino',
+                'fi' => 'Finnish',
+                'fr' => 'French',
+                'fr-CA' => 'French (Canadian)',
+                'gl' => 'Galician',
+                'ka' => 'Georgian',
+                'de' => 'German',
+                'de-AT' => 'German (Austria)',
+                'de-CH' => 'German (Switzerland)',
+                'el' => 'Greek',
+                'gu' => 'Gujarati',
+                'iw' => 'Hebrew',
+                'hi' => 'Hindi',
+                'hu' => 'Hungarain',
+                'is' => 'Icelandic',
+                'id' => 'Indonesian',
+                'it' => 'Italian',
+                'ja' => 'Japanese',
+                'kn' => 'Kannada',
+                'ko' => 'Korean',
+                'lo' => 'Laothian',
+                'lv' => 'Latvian',
+                'lt' => 'Lithuanian',
+                'ms' => 'Malay',
+                'ml' => 'Malayalam',
+                'mr' => 'Marathi',
+                'mn' => 'Mongolian',
+                'no' => 'Norwegian',
+                'fa' => 'Persian',
+                'pl' => 'Polish',
+                'pt' => 'Portuguese',
+                'pt-BR' => 'Portuguese (Brazil)',
+                'pt-PT' => 'Portuguese (Portugal)',
+                'ro' => 'Romanian',
+                'ru' => 'Russian',
+                'sr' => 'Serbian',
+                'si' => 'Sinhalese',
+                'sk' => 'Slovak',
+                'sl' => 'Slovenian',
+                'es' => 'Spanish',
+                'es-419' => 'Spanish (Latin America)',
+                'sw' => 'Swahili',
+                'sv' => 'Swedish',
+                'ta' => 'Tamil',
+                'te' => 'Telugu',
+                'th' => 'Thai',
+                'tr' => 'Turkish',
+                'uk' => 'Ukrainian',
+                'ur' => 'Urdu',
+                'vi' => 'Vietnamese',
+                'zu' => 'Zulu'
             )
         );
 
@@ -126,10 +126,10 @@ class JPreCaptcha
         $ins = $GLOBALS['JPreCaptchaCore'];
 
         $constants = array(
-            "JPRECAPTCHA_FILE" => __FILE__,
-            "JPRECAPTCHA_DIR" => plugin_dir_path(__FILE__),
-            "JPRECAPTCHA_BASE" => plugin_basename(__FILE__),
-            "JPRECAPTCHA_DOMAIN" => 'jp-recaptcha'
+            'JPRECAPTCHA_FILE' => __FILE__,
+            'JPRECAPTCHA_DIR' => plugin_dir_path(__FILE__),
+            'JPRECAPTCHA_BASE' => plugin_basename(__FILE__),
+            'JPRECAPTCHA_DOMAIN' => 'jp-recaptcha'
         );
 
         foreach ( $constants as $constant => $def ) {
@@ -145,7 +145,7 @@ class JPreCaptcha
     {
         $ins = $GLOBALS['JPreCaptchaCore'];
         
-        load_plugin_textdomain(JPRECAPTCHA_DOMAIN, FALSE, dirname(JPRECAPTCHA_BASE).'/languages');
+        load_plugin_textdomain('jp-recaptcha', FALSE, dirname(JPRECAPTCHA_BASE).'/languages');
 
         return $ins;
     }
@@ -280,7 +280,7 @@ class JPreCaptcha
 
             return new WP_Error(
                 'possible_spam',
-                __('Unable to process your submission, you have failed the spam test!', JPRECAPTCHA_DOMAIN)
+                __('Unable to process your submission, you have failed the spam test!', 'jp-recaptcha')
             );
         }
 
@@ -314,7 +314,7 @@ class JPreCaptcha
             <span class="g-recaptcha jp-recaptcha" data-sitekey="<?php echo $JPreCaptcha->public; ?>"></span>
             <?php if ( isset($JPreCaptcha->failed) && $JPreCaptcha->failed ) : ?>
                 <p style="color: #dc3232" class="jp-recaptcha-message">
-                    <?php _e('Please complete this test!', JPRECAPTCHA_DOMAIN); ?>
+                    <?php _e('Please complete this test!', 'jp-recaptcha'); ?>
                 </p>
             <?php endif; ?>
         </div>

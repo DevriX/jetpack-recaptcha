@@ -32,6 +32,12 @@ echo $JPreCaptchaCore::appendField( $myHTML );
 
 Once you activate the plugin, you should now navigate to "Settings" > "JP reCaptcha" (or "Options" > "JP reCaptcha" for network activated plugin) and add your Google reCaptcha credentials (public and private keys) which you can obtain from https://www.google.com/recaptcha/admin
 
+**Translations:**
+
+Jetpack reCaptcha plugin is translated by the community into the following languages:
+
+* Polish by [Maciej Michalowski](http://michalowski.pro)
+
 The development version of this plugin is hosted on Github, feel free to fork it, contribute and improve it, or start a new issue if you want to report something like an unusual bug. 
 
 Here's the Github repo: https://github.com/elhardoum/jetpack-recaptcha
@@ -55,3 +61,6 @@ Once you activate the plugin, you should now navigate to "Settings" > "JP reCapt
 
 = 0.1 =
 * Initial stable release.
+
+= 0.2 =
+* Added Polish translation, thanks Maciej Michalowski!
